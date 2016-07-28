@@ -14,7 +14,7 @@ class main{
       return task.terminationStatus
     }//func ends here
     
-  //get current time as string
+  //get current time as string. html report will be generated based on current time
   func getCurrentTimeStamp() -> String{
         
       let date = NSDate()
@@ -30,6 +30,6 @@ class main{
 let run = main()
 
 var currentTime = run.getCurrentTimeStamp()
-run.runTerminalCommand("/bin/bash", args: "runXcodeBuild.sh","xcodeprojectLocation","schemeName","desiredLocationToSaveTestReort","\(currentTime)")
+run.runTerminalCommand("/bin/bash", args: "runXcodeBuild.sh",".xcodeprojectLocation","schemeName","desiredLocationToSaveTestReort","\(currentTime)")
 
 
